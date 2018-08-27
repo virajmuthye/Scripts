@@ -6,7 +6,7 @@
 #output: "$file".M
 
 
-grep 'M' -B 1 --no-group-separator $1 | grep ">" | sed 's/>//g' > "$1".Msomewhere.list
+grep 'M' -B 100 --no-group-separator $1 | grep ">" | sed 's/>//g' > "$1".Msomewhere.list
 perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' "$1".Msomewhere.list $1 > "$1".Msomewhere 
 
 awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < "$1".Msomewhere | sed 'n; d' > seqline

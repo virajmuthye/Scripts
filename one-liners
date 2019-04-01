@@ -1,7 +1,0 @@
-# To append to all headers of your fasta files:
-sed 's/>.*/&mito/' input > output
-
-#To get sequence lengths for all sequences in a fasta file:
-awk '/^>/ {if (seqlen){print seqlen}; print ;seqlen=0;next; } { seqlen = seqlen +length($0)}END{print seqlen}' \
-filename.fasta
-

@@ -4,7 +4,6 @@
 # how to run this script
 # ./extract_domain_sequences.bash <input pfam result file>
 
-
 IFS=$'\n'       # make newlines the only separator
 set -f          # disable globbing
 
@@ -26,7 +25,7 @@ for i in $(cat < "$1"); do
 
 	str=$(cat temp.pep | awk '/^>/{if(N>0) printf("\n"); ++N; printf("%s\t",$0);next;} {printf("%s",$0);}END{printf("\n");}' | awk '{print $2}')
 	
-	echo "$name""_""$seq" >> "$name".fasta
+	echo ">""$name""_""$seq" >> "$name".fasta
 	echo "${str:$domstart:$domlength}"  >> "$name".fasta 
 
 	rm temp1

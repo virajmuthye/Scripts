@@ -22,7 +22,11 @@ Download the latest release from http://ftp.ebi.ac.uk/pub/databases/Pfam/current
 	module load hmmer
 	hmmpress Pfam-A.hmm
 
-
+This will create the following files 
+Pfam-A.hmm.h3f
+Pfam-A.hmm.h3i
+Pfam-A.hmm.h3m
+Pfam-A.hmm.h3p
 
 5. Save this in a jobscript:  pfam.slurm
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

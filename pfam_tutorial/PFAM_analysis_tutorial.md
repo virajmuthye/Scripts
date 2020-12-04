@@ -100,7 +100,8 @@ Submit the file as input
 Select "PFAM families" as input type in Step 1
 
 
-## An alternate way to identify protein domains
+## Identifying PFAM domains using HMMer
+	
 1. Download curated HMM protein domain models from sources like PFAM. 
 
 Before doing this, I recommend reading the HMMer manual "http://eddylab.org/software/hmmer/Userguide.pdf". Specifically, there's a part in the manual on how you can begin basic analysis without reading the nitty-gritties of HMMer.

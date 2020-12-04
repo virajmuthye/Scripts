@@ -7,6 +7,7 @@ This tutorial will take you through the basic steps of identifying and analyzing
 1. Have the FASTA file with sequences of interest ready.
 
 2. Download the script pfam_scan.pl from http://ftp.ebi.ac.uk/pub/databases/Pfam/Tools/
+This is already installed as a module on ISU CONDO and NOVA and all you need to do is load the module. 
 
 3. Download the PFAM HMMs
 
@@ -22,7 +23,7 @@ Download the latest release from http://ftp.ebi.ac.uk/pub/databases/Pfam/current
 
 
 
-5. Run this job script:
+5. Save this in a jobscript:  pfam.slurm
 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 #!/bin/bash
 
@@ -48,5 +49,9 @@ module load pfamscan
 pfam_scan.pl -fasta allmuts.fasta -dir /work/LAS/dlavrov-lab/muts/domain_search -outfile allmuts.pfam -clan_overlap -e_seq 0.00001
 
 >>>>>>>>>>>>>>>>>>>>>>>>
+
+6. Run the jobscript
+sbatch pfam.slurm
+
 ```
 

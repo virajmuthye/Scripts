@@ -1,4 +1,4 @@
-PFAM analysis
+# PFAM analysis
 
 This tutorial will take you through the basic steps of identifying and analyzing PFAM domains in proteins. 
 1. Have the FASTA file with sequences of interest ready.

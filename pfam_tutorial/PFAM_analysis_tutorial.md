@@ -1,6 +1,9 @@
+```markdown
+
 # PFAM analysis
 
 This tutorial will take you through the basic steps of identifying and analyzing PFAM domains in proteins. 
+
 1. Have the FASTA file with sequences of interest ready.
 
 2. Download the script pfam_scan.pl from http://ftp.ebi.ac.uk/pub/databases/Pfam/Tools/
@@ -45,6 +48,5 @@ module load pfamscan
 pfam_scan.pl -fasta allmuts.fasta -dir /work/LAS/dlavrov-lab/muts/domain_search -outfile allmuts.pfam -clan_overlap -e_seq 0.00001
 
 >>>>>>>>>>>>>>>>>>>>>>>>
-
-
+```
 

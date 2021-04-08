@@ -4,6 +4,8 @@ module load paml
 
 while read p;do
 
+	echo $p >> genename	
+
 	# protein alignment using mafft
 	mafft --auto "$p".pep > "$p".aln
 	
@@ -57,9 +59,12 @@ while read p;do
 	
 done < gene
 
-	paste -d, null_file test_file species1_omega_null species2_omega_null species3_omega_null species1_omega_test species2_omega_test species3_omega_test > LRT.csv
+	#make CSV file
+	echo "gene,null_lnL,test_lnL,sp1_w_null,sp2_w_null,sp3_w_null,sp1_w_test,sp2_w_test,sp3_w_test" >> LRT.csv
+	paste -d, genename null_file test_file species1_omega_null species2_omega_null species3_omega_null species1_omega_test species2_omega_test species3_omega_test >> LRT.csv
 
-
+#clean files 
+rm genename
 rm null_file
 rm test_file
 rm species1_omega_null

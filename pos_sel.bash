@@ -1,5 +1,5 @@
-module load paml
-
+# load the paml module
+# module load paml
 # need protein and CDS sequences in one folder
 
 while read p;do
@@ -85,7 +85,3 @@ rm 2NG.dS
 rm 2NG.dN
 rm seq.phy
 rm *.aln
-
-
-
-

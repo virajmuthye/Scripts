@@ -1,5 +1,14 @@
-# To append to all headers of your fasta files:
+# Useful one-liners
+
+## To append to all headers of your fasta files:
+```
 sed 's/>.*/&mito/' input > output
+```
+
+## Extract protein sequences from a multi-faste file using their header names in another file
+```
+perl -ne 'if(/^>(\S+)/){$c=$i{$1}}$c?print:chomp;$i{$_}=1 if @ARGV' ids.file fasta.file
+```
 
 ## To get sequence lengths for all sequences in a fasta file:
 ```

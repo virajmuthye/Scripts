@@ -18,7 +18,7 @@ awk -v FS= '/^>/{print;next}{for (i=0;i<=NF/60;i++) {for (j=1;j<=60;j++) printf 
 fold -w 60 file
 ```
 
-## rename FASTA headers using a 2-column lookup table output format: >New|Old lookup table: tab-delimited 2-column text file with Old ID in first column and New ID in second
+## Rename FASTA headers using a 2-column lookup table output format: tab-delimited 2-column text file with Old ID in first column and New ID in second
 ```
 awk 'FNR==NR { a[">"$1]=$2; next } $1 in a { sub(/>/,">"a[$1]"|",$1)}1' lookup.txt seqs.fasta
 ```

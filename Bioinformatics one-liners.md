@@ -2,7 +2,7 @@
 
 ## Change multiple spaces to a single space
 ```
-s/\ \ */\ /g
+sed 's/\ \ */\ /g' $file
 ```
 
 ## To append to all headers of your fasta files:

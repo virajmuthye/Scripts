@@ -1,5 +1,10 @@
 # Useful one-liners
 
+## Change multiple spaces to a single space
+```
+s/\ \ */\ /g
+```
+
 ## To append to all headers of your fasta files:
 ```
 sed 's/>.*/&mito/' input > output

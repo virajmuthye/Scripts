@@ -1,5 +1,9 @@
 # Useful one-liners
 
+## Windows to Unix
+sed -i 's/\r$//' filename
+
+
 ## Change multiple spaces to a single space
 ```
 sed 's/\ \ */\ /g' $file

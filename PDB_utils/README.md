@@ -1,0 +1,1 @@
+PDB structures are usually composed of structures from multiple source organisms. This folder contains a pipeline to download a list of PDB structures, and then using the information in the DBREF columns, map each chains to the Uniprot IDS. Using these results, the script will extract chains that map to the organism of interest.

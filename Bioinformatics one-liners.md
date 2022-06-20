@@ -9,6 +9,11 @@ sed -i 's/\r$//' filename
 sed 's/\ \ */\ /g' $file
 ```
 
+## Rename the fasta headers of a multi-fasta file:
+```
+awk '/^>/{print ">chromosome" ++i; next}{print}' < file.fasta
+```
+
 ## To append to all headers of your fasta files:
 ```
 sed 's/>.*/&mito/' input > output

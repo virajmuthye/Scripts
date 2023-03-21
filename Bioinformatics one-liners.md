@@ -1,8 +1,14 @@
 # Useful one-liners
 
 ## Windows to Unix
+```
 sed -i 's/\r$//' filename
+```
 
+## Windows to Unix
+```
+sed 's/[a-z]/\U&/g' filename
+```
 
 ## Change multiple spaces to a single space
 ```

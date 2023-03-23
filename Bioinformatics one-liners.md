@@ -5,7 +5,7 @@
 sed -i 's/\r$//' filename
 ```
 
-## Windows to Unix
+## Convert all letters in a file to uppercase
 ```
 sed 's/[a-z]/\U&/g' filename
 ```

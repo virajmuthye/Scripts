@@ -1,6 +1,9 @@
 #BUSCO does not provide mapping of BUSCO ID and Uniprot ID
 #This script loops through a list of BUSCO ids and then gets the uniport ID from OrthoDB using the OrthoDB API
 #filename is a list of BUSCO ids with one on each line
+# USAGE #
+#python download_and_process.py input_file.txt
+#
 
 import os
 import sys

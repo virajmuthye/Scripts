@@ -1,6 +1,5 @@
 ---
 title: "Bioinformatics Tools"
-output: html_document
 ---
 
 # Bioinformatics Tools
